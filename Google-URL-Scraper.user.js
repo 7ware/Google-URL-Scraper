@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Google URL Scraper
-// @version      1.0
+// @version      1.1
 // @homepage     https://github.com/7ware/Google-URL-Scraper
 // @homepageURL  https://github.com/7ware/Google-URL-Scraper
 // @description  Scrape raw URLs from Google Search results
@@ -10,7 +10,7 @@
 // @icon         https://icons.duckduckgo.com/ip2/google.com.ico
 // @grant        none
 // @run-at       document-end
-// @copyright    2024 7ware
+// @copyright    2022 7ware
 // @supportURL   https://github.com/7ware/Google-URL-Scraper/issues
 // @updateURL    https://github.com/7ware/Google-URL-Scraper/raw/main/Google-URL-Scraper.user.js
 // @downloadURL  https://github.com/7ware/Google-URL-Scraper/raw/main/Google-URL-Scraper.user.js
