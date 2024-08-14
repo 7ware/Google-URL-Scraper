@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Google URL Scraper
-// @version      1.0
+// @version      1.2
 // @homepage     https://github.com/7ware/Google-URL-Scraper
 // @homepageURL  https://github.com/7ware/Google-URL-Scraper
 // @description  Scrape raw URLs from Google Search results
