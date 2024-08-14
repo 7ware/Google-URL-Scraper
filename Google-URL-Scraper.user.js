@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name         Google URL Scraper
-// @version      1.1
+// @version      1.0
 // @homepage     https://github.com/7ware/Google-URL-Scraper
 // @homepageURL  https://github.com/7ware/Google-URL-Scraper
 // @description  Scrape raw URLs from Google Search results
 // @author       7ware
-// @require      https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.9/clipboard.min.js
 // @match        *www.google.com/*
 // @icon         https://icons.duckduckgo.com/ip2/google.com.ico
 // @grant        none
 // @run-at       document-end
-// @copyright    2022 7ware
+// @copyright    2024 7ware
 // @supportURL   https://github.com/7ware/Google-URL-Scraper/issues
 // @updateURL    https://github.com/7ware/Google-URL-Scraper/raw/main/Google-URL-Scraper.user.js
 // @downloadURL  https://github.com/7ware/Google-URL-Scraper/raw/main/Google-URL-Scraper.user.js
@@ -20,7 +20,7 @@
 
 	console.clear();
 
-	const logger__prefix = atob('WyBnaXRodWIuY29tLzd3YXJlXQ==') + '\t';
+	const logger__prefix = atob('WyBnaXRodWIuY29tL210ZnkgXQ==') + '\t';
 	var ls_timer = null;
 
 	function isUrlEncoded(uri) {
@@ -186,17 +186,17 @@
 	async function f_text(txt) {
 		const textarea = document.createElement('textarea'), div = document.createElement('div'), button = document.createElement('button');
 		div.classList.add('appbar');
-		div.classList.add('7ware__appbar');
+		div.classList.add('mtfy__appbar');
 		div.dataset.st_cnt = 'top';
-		const code = `.7ware__appbar button { margin-top: .75em; font-size: 10px; padding: 6px 8px; font-family: 'Verdana', sans-serif; font-size: 14px; border: 1px solid #454545; border-radius: 7px; }.7ware__appbar { display:block !important;margin-bottom:2.3em;width: 60%; height: 240px !important; } .7ware__txt { width: 100%; height: 195px !important; font-family: monospace, auto; !important; display:block !important; background: #00000025; padding: 8px; border: 1px solid #444; border-radius: 14px; font-size: 12px; } `, css = document.createElement('style');
+		const code = `.mtfy__appbar button { margin-top: .75em; font-size: 10px; padding: 6px 8px; font-family: 'Verdana', sans-serif; font-size: 14px; border: 1px solid #454545; border-radius: 7px; }.mtfy__appbar { display:block !important;margin-bottom:2.3em;width: 60%; height: 240px !important; } .mtfy__txt { width: 100%; height: 195px !important; font-family: monospace, auto; !important; display:block !important; background: #00000025; padding: 8px; border: 1px solid #444; border-radius: 14px; font-size: 12px; } `, css = document.createElement('style');
 		css.innerText = code;
 		document.getElementsByTagName('head')[0].appendChild(css);
-		textarea.classList.add('7ware__txt');
+		textarea.classList.add('mtfy__txt');
 		textarea.textContent = txt;
-		textarea.id = '7ware__urls';
+		textarea.id = 'mtfy__urls';
 		div.appendChild(textarea);
 		button.dataset.clipboardAction = 'copy';
-		button.dataset.clipboardTarget = '#7ware__urls';
+		button.dataset.clipboardTarget = '#mtfy__urls';
 		button.innerText = 'Copy to clipboard';
 		try {
 			const clipBoard = new ClipboardJS(button);
@@ -210,7 +210,7 @@
 		} catch (err) {
 			console.error(`\n${logger__prefix}Clipboard.js => "${err.toString()}"\n`);
 		}
-		
+
 		textarea.parentNode.insertBefore(button, textarea.nextSibling);
 		const appbar = document.querySelector('div.appbar#appbar');
 		if (appbar !== null) {
